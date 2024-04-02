@@ -1,0 +1,146 @@
+body {
+    background-color: aliceblue;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    font-size: 60px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+button{
+    border-radius: 10px;
+    height: 50px;
+    width: 200px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+}
+button.active {
+    background-color: #000435;
+    color: aliceblue;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #000435;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  input[type='color'] {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+.grid {
+    border: solid 2px black;
+    height:500px;
+    width: 500px;
+    display: grid;
+}
+.grid-size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.grid-element {
+    user-select: none;
+  }
+  element.style {
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+
+@media (max-width: 1200px) {
+    .main {
+      justify-content: center;
+    }
+  }
+
+@media (max-width: 850px) {
+    .main {
+      gap: 50px;
+    }
+  
+    .settings {
+      width: 150px;
+      gap: 16px;
+    }
+  
+    .size-value {
+      margin-bottom: -4px;
+    }
+  
+    .grid {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .title {
+      font-size: 50px;
+    }
+  
+    .main {
+      flex-direction: column-reverse;
+    }
+  
+    .grid {
+      width: 300px;
+      height: 300px;
+    }
+  }
